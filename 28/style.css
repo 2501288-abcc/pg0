@@ -1,0 +1,253 @@
+/* === 全体設定 === */
+
+body.home {
+
+  margin: 0;
+
+  padding: 0;
+
+  padding-top: 60px; /* ナビ分のスペース */
+
+  font-family: 'Consolas', 'Courier New', monospace;
+
+  background-color: #0a0a0a;
+
+  color: #00ffcc;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow-x: hidden;
+
+}
+ 
+/* 動く背景ライン */
+
+body.home::before {
+
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 200%;
+
+  height: 100%;
+
+  background: repeating-linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    transparent 10px,
+
+    #00ffcc 10px,
+
+    #00ffcc 11px
+
+  );
+
+  animation: moveBorder 8s linear infinite;
+
+  opacity: 0.12;
+
+  z-index: -1;
+
+}
+ 
+@keyframes moveBorder {
+
+  0% { left: -100%; }
+
+  100% { left: 0%; }
+
+}
+ 
+/* ナビゲーション */
+
+nav#nav1 {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 60px;
+
+  background-color: #001f1f;
+
+  border-bottom: 2px solid #00ffcc;
+
+  z-index: 1000;
+
+}
+ 
+nav#nav1 ul {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+ 
+nav#nav1 ul li {
+
+  margin: 0 20px;
+
+}
+ 
+nav#nav1 ul li a {
+
+  color: #00ffcc;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+
+}
+ 
+nav#nav1 ul li a:hover {
+
+  color: #00ffaa;
+
+  text-decoration: underline;
+
+}
+ 
+/* 見出し */
+
+h1, h2, h3 {
+
+  margin: 20px 0;
+
+  color: #00ffcc;
+
+  text-shadow: 0 0 10px #00ffcc;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+}
+ 
+/* 段落 */
+
+p {
+
+  max-width: 900px;
+
+  margin: 10px auto;
+
+  padding: 0 15px;
+
+  line-height: 1.8;
+
+  font-size: 1.3rem;
+
+  color: #00ddd0;
+
+  text-shadow: 0 0 6px #008080;
+
+}
+ 
+/* 画像（ホームページ用） */
+
+body.home img {
+
+  width: 180px;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid #00ffcc;
+
+  box-shadow: 0 0 20px #00ffcc;
+
+  margin: 30px auto 10px;
+
+  display: block;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+ 
+body.home img:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 30px #00ffaa, 0 0 40px #00ffaa;
+
+}
+ 
+/* リンク */
+
+a {
+
+  color: #00ffcc;
+
+  background-color: transparent;
+
+  border: 2px solid #00ffcc;
+
+  padding: 12px 30px;
+
+  display: inline-block;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  font-weight: bold;
+
+  margin: 25px auto;
+
+  font-size: 1.3rem;
+
+  transition: background-color 0.3s, color 0.3s;
+
+  letter-spacing: 1px;
+
+}
+ 
+a:hover {
+
+  background-color: #00ffcc;
+
+  color: #001f1f;
+
+  box-shadow: 0 0 15px #00ffcc;
+
+}
+
+ 
